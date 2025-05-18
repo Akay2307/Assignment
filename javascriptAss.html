@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_Assignment</title>
+</head>
+<body>
+    <script>
+        // Section A: JavaScript Array Methods 
+
+        // 1. push() Method - Adds one or more elements to the end of an array and returns the new length of the array.
+        let fruits = ['apple', 'banana']; //push() Method
+        fruits.push('orange');  
+        console.log(fruits);
+
+        //  pop() Method- Removes the last element from an array and returns that element. The length of the array decreases by one.
+        let names = ['Bola', 'John', 'Jake']; //pop() Method
+        let removedName = names.pop();  
+        console.log(removedName);
+        console.log(names);
+
+        // 2. Use the `filter()` method to extract all even numbers from an array of numbers between 1 and 20.
+        let numbers = Array.from({ length: 20 }, (_, i) => i + 1); //creates an array of numbers from 1 to 20.
+        let evenNumbers = numbers.filter(num => num % 2 === 0); //filters out only the even numbers (i.e., those divisible by 2).
+        console.log(evenNumbers);
+
+        // 3. The find() method in JavaScript is used to search through an array and return the first element that satisfies a given condition. 
+        // If no element matches the condition, it returns undefined.
+        let scores = [85, 72, 64, 48, 90, 33];
+        let firstFail = scores.find(score => score < 50);
+        console.log(firstFail);
+
+
+        // Section B: JavaScript Conditions
+    
+        // 1. `if`, `else if`, and `else`
+        let score = 75;
+
+        if (score >= 90) { // iF - Tests a specific condition. If it's true, the code inside the if block runs.
+        console.log("Grade: A");
+
+        } else if (score >= 80) { // else if - Used to test another condition if the first if is false. 
+        console.log("Grade: B");
+
+        } else if (score >= 70) { // You can have multiple else if blocks.
+        console.log("Grade: C");
+
+        } else { // else - Executes if none of the above conditions are true. It's the fallback or default block.
+        console.log("Grade: F");
+        }
+
+
+        // 2. checks if a number is positive, negative, or zero.
+        let number = 5; // You can change this value to test other numbers
+
+        if (number > 0) {
+        console.log("The number is positive.");
+        } else if (number < 0) {
+        console.log("The number is negative.");
+        } else {
+        console.log("The number is zero.");
+        }
+
+        // 3. switch statement
+        //    A switch statement is used to perform different actions based on different conditions. 
+        //    It's an alternative to using many if...else if...else statements when checking the value of a single variable.
+
+        let day = "Monday";
+
+        switch(day) {
+        case "Monday":
+            console.log("Start of the work week.");
+            break;
+        case "Tuesday":
+            console.log("Second day of the work week.");
+            break;
+        case "Wednesday":
+            console.log("Midweek day.");
+            break;
+        case "Thursday":
+            console.log("Almost Friday.");
+            break;
+        case "Friday":
+            console.log("Last workday of the week.");
+            break;
+        case "Saturday":
+        case "Sunday":
+            console.log("It's the weekend!");
+            break;
+        default:
+            console.log("Invalid day.");
+        }
+
+        // 4. comparison operators (==, ===, !=, !==, >, <)
+        //    Comparison operators are used to compare two values. 
+        //    The result of a comparison is always a boolean (true or false).
+        console.log(5 == '5');  // true (number and string are converted)
+
+        console.log(5 === '5'); // false (different types)
+        console.log(5 === 5);   // true
+
+        console.log(5 != '5');  // false (they are equal after conversion)
+
+        console.log(5 !== '5'); // true (different types)
+
+        console.log(10 > 5);    // true
+
+        console.log(3 < 7);     // true
+
+        // 5. an if else condition
+        let grade = 65; // You can change this value to test different scores
+        let passMark = 50;
+
+        if (grade >= passMark) {
+        console.log("The student passed.");
+        } else {
+        console.log("The student failed.");
+        }
+
+
+        // Section C: JavaScript Functions
+
+        // 1. Section C: JavaScript Functions
+        // A function in JavaScript is a reusable block of code designed to perform a specific task. 
+        // Functions help make code more organized, modular, and easier to maintain.
+        
+        function greet() { // how to define
+            console.log("Hello, world!");
+        }
+
+        // 2. function named `greetUser`
+        function greetUser(name) {
+            console.log("Hello, " + name + "!");
+        }
+        greetUser("Akin");
+        
+
+        // 3. a function that takes two numbers and returns their product.
+        function multiply(a, b) {
+        return a * b;
+        }
+        let result = multiply(4, 5);
+        console.log(result);
+    </script>
+</body>
+</html>
